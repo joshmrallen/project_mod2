@@ -1,0 +1,5 @@
+<% if favorites.id %>
+<p>"<%= favorites.content %>"</p>
+<p><strong>-<%= favorites.author %></strong></p><br>
+ <%= button_to "Delete", favorite_path(Favorite.find_by(quote_id: favorites.id, user_id: @user.id)), :method => :delete %>
+ <%end %>

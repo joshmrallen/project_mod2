@@ -1,0 +1,11 @@
+Rails.application.routes.draw do
+  #TODO: Add Welcome controller with home action and put it as root 'welcome#home'
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  resources :users
+  get '/users/:id/favorites', to: 'users#favorites', as: 'favorite_quotes'
+  post '/users/:id/favorites/:quote_id', to: 'users#remove_favorite'
+  post '/quotes/:quote_id', to: 'users#add_to_user_favorites'
+  resources :favorites
+  resources :quotes
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end
