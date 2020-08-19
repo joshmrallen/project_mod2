@@ -14,11 +14,17 @@ class QuotesController < ApplicationController
 
    def define
     @quote = Quote.find(params[:id])
-    api_key = ''
+    api_key = ENV["API_KEY"]
     url = 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/'
     endpoint = url + @quote.word_query.split(/\W/) + "?key=" + api_key
     response = JSON.parse(RestClient.get(endpoint))
     @quote.word_definition = response
+    byebug
+   end
+
+   def show
+    byebug
+    @api_json = "ok"
    end
 
    #TODO: make view for #define

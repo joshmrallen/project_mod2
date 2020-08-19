@@ -1,4 +1,8 @@
 <% unless @user.quotes.include?(index_quote) %>
-    <h3><%= render partial: 'link_word', collection: index_quote.split_quote_array %> - <%= index_quote.author %></h3><br><br>
+    <h3><% index_quote.split_quote_array.each do |word|%>
+    <%= link_to word, :controller => 'quotes', :action => 'query', :method => 'post', :quote_id => index_quote.id, :word_query => word %>
+    <%end %> -
+    <%= index_quote.author %>
+    </h3><br><br>
     <%= button_to "Add to Favorites", :controller => 'users', :action => 'add_to_user_favorites', :method => 'post', :quote_id => index_quote.id %>
 <% end %>
