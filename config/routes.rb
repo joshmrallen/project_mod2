@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :words
   #TODO: Add Welcome controller with home action and put it as root 'welcome#home'
   devise_for :users, controllers: { sessions: 'users/sessions' }
   resources :users

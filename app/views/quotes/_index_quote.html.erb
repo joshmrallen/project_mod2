@@ -1,6 +1,6 @@
 <% unless @user.quotes.include?(index_quote) %>
     <h3><% index_quote.split_quote_array.each do |word|%>
-    <%= link_to word, :controller => 'quotes', :action => 'query', :method => 'post', :quote_id => index_quote.id, :word_query => word %>
+    <%= link_to word, word_path(@word)controller => 'quotes', :action => 'query', :method => 'post', :quote_id => index_quote.id, :word_query => word %>
     <%end %> -
     <%= index_quote.author %>
     </h3><br><br>

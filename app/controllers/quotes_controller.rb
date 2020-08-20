@@ -9,7 +9,8 @@ class QuotesController < ApplicationController
    def query
     @quote = Quote.find(params[:quote_id])
     @quote.word_query = params[:word_query]
-    redirect_to define_path(@quote.id)
+    byebug
+    redirect_to word_path(word.id)
    end
 
    def define
@@ -23,7 +24,6 @@ class QuotesController < ApplicationController
    end
 
    def show
-    byebug
     @api_json = "ok"
    end
 
