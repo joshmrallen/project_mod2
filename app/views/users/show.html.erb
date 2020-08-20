@@ -1,5 +1,6 @@
 <h1> Welcome <%= @user.email %> </h1>
 <h2> Here's your quote of the day! </h2>
-<p><%# @quote.content %> - <%# @quote.author %> </p>
+<p><% @quote.content %> - <% @quote.author %> </p>
 
 <%= render 'user_nav' %>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

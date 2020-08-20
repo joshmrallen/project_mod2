@@ -2,7 +2,11 @@ class UsersController < ApplicationController
     before_action :authenticate_user!
     
     def show
-        @user = User.find(params[:id])
+        if current_user
+        @user = current_user
+        else
+            redirect_to new_user_session_path
+        end 
     end
 
     def favorites
