@@ -26,18 +26,20 @@ class QuotesController < ApplicationController
       endpoint = url + word + "?key=" + api_key
       @response = RestClient.get(endpoint)
       @quote.word_definition = JSON.parse(@response)
-      @header_word = JSON.parse(@response)[0]["meta"]["id"]
-      @pronunciation = JSON.parse(@response)[0]["hwi"]["prs"][0]["mw"]
-      @def = JSON.parse(@response)[0]["def"][0]["sseq"]
+
+      if !JSON.parse(@response)[0].include?("meta")
+         @header_word = "Definition not found."
+      elsif JSON.parse(@response)[0].include?("cxs")
+         @header_word = JSON.parse(@response)[0]["hwi"]["hw"]
+         @cxs_def = JSON.parse(@response)[0]["cxs"].map{|array| array["cxl"]}
+      else
+         @header_word = JSON.parse(@response)[0]["hwi"]["hw"]
+         if !JSON.parse(@response)[0].include?("def")
+            @pronunciation = JSON.parse(@response)[0]["hwi"]["prs"][0]["mw"]
+         end
+         @def = JSON.parse(@response)[0]["def"][0]["sseq"]
+      end
       # byebug
    end
-
-#    def show
-#     @api_json = "ok"
-#    end
-
-   #TODO: make view for #define
-   #TODO: add routes for post query and get define
-
 
 end

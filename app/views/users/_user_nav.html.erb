@@ -1,1 +1,2 @@
-<p><%= link_to 'Back to Profile', user_path(@user.id) %> | <%= link_to 'Favorite Quotes', favorite_quotes_path %> | <%= link_to 'Browse Quotes', quotes_path %> </p>
+<p><%= link_to 'Back to Profile', user_path(@user.id) %> | <%= link_to 'Favorite Quotes', favorite_quotes_path(@user.id) %> | <%= link_to 'Browse Quotes', quotes_path %> </p>
+<p><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></p>

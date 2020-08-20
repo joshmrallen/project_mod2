@@ -1,18 +1,31 @@
 <h1><em><%= @header_word %></em></h1>
 
-<h3><%= @pronunciation %></h3>
+<% if JSON.parse(@response)[0].include?("def") %>
 
-<p><strong>Parts Of Speech: </strong><%= JSON.parse(@response)[0]["fl"] %></p>
+    <h3><%= @pronunciation %></h3>
 
-<h4>Definition:</h4>
-<% @def.each do |var| %>
-    <% var.each do |sense| %>
+    <p><strong>Parts Of Speech: </strong><%= JSON.parse(@response)[0]["fl"] %></p>
+
+    <h4>Definition:</h4>
+    <% @def.each do |var| %>
+        <% var.each do |sense| %>
+            <p>
+                <%= sense[1]["sn"] %>: 
+                <%= sense[1]["dt"][0][1] %><br><br>
+            </p>
+        <% end %>
+    <% end %>
+
+<% elsif JSON.parse(@response)[0].include?("cxs") %>
+    <h4>Definition:</h4>
+    <% @cxs_def.each do |cxl| %>
         <p>
-            <%= sense[1]["sn"] %>: 
-            <%= sense[1]["dt"][0][1] %><br><br>
+            <%= cxl %>
         </p>
     <% end %>
 <% end %>
+
+<%= link_to 'Back to Quotes', quotes_path %>
 
 
 
