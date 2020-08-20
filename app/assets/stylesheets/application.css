@@ -37,11 +37,42 @@
     background: var(--background-color);
 }
 
-.welcome {
-    grid-area: heading;
+
+
+#welcome {
+    grid-area: header;
+    justify-self: center;
+    font-family: var(--display-font);
+    text-align: center;
+    font-size: 5vw;
+}
+
+header {
+    positiion: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    border-bottom: 1px solid var(--border-color);
+    height: 54px;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    margin: 0 0 16px 8px;
+}
+
+#header-contents {
+    width: 100%;
+    max-width: 950px;
+    padding: 0 10px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    font-family: var(--display-font);
+    font-size: 28px;
+    font-weight: 400;
 }

@@ -1,6 +1,15 @@
-<div class="welcome"><h1> Welcome <%= @user.email %> </h1></div>
+<div class="container">
+    <div id="welcome">
+        <h1>Welcome Scholar!</h1>
+    </div>
+    
+    <div class="quote">
+        <h2> Random Words of Wisdom: </h2>
+        <p>"<%= @quote.content %>"<br> - <em><%= @quote.author %></em> </p>
+    </div>
 
-<h2> Here's your quote of the day! </h2>
-<p><%# @quote.content %> - <%# @quote.author %> </p>
+    <footer>
+        <%= render 'user_nav' %>
+    </footer>
+</div>
 
-<%= render 'user_nav' %>

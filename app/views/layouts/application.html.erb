@@ -12,6 +12,12 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <header>
+      <div id="header-contents">
+        <h1 class="site-title">Quotator</h1>
+        <%= link_to 'Browse Quotes', quotes_path %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

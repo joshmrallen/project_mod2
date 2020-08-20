@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw 33vw;
+    grid-template-rows: 25vw 25vw 25vw 25vw;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "main main main"
+        "footer footer footer ";
+    align-content: space-around;
+}
+
+.quote {
+    text-align: center;
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    grid-column: 2;
+    grid-row: 4;
+    text-align: center;
+}
