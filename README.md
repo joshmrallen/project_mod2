@@ -1,3 +1,7 @@
+
+user --< favorite >-- quote
+word
+
 Select a quote in favorites
 
 Split that quote into strings of individual words
