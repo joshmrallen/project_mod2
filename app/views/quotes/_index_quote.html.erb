@@ -8,7 +8,7 @@
                 <%= word %>
             <% end %>
         <% end %>
-        " - <%= index_quote.author %>
+        "<br> - <%= index_quote.author %>
     </h3><br><br>
     <%= button_to "Add to Favorites", :controller => 'users', :action => 'add_to_user_favorites', :method => 'post', :quote_id => index_quote.id %>
 <% end %>

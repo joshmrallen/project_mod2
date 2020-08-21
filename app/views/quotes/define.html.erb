@@ -1,4 +1,4 @@
-<h1><em><%= @header_word %></em></h1>
+<h1 style="color:lightblue;"><em><%= @header_word %></em></h6>
 
 <% if JSON.parse(@response)[0].include?("def") %>
 
@@ -6,7 +6,7 @@
 
     <p><strong>Parts Of Speech: </strong><%= JSON.parse(@response)[0]["fl"] %></p>
 
-    <h4>Definition:</h4>
+    <h4 style="color:lightblue;">Definition:</h4>
     <% @def.each do |var| %>
         <% var.each do |sense| %>
             <p>

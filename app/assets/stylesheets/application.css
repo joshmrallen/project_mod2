@@ -14,7 +14,7 @@
  *= require_self
  */
 
- :root {
+ /*:root {
     --button-color: #0097F2;
     --background-color: #FAFAFA;
     --border-color: #cacaca;
@@ -44,4 +44,35 @@
     justify-content: center;
     align-items: flex-start;
     margin: 0 0 16px 8px;
+}
+*/
+header{
+    position:center;
+    width:50%
+    
+}
+  a:link {
+    text-decoration: blue;
+    color: rgb(240, 246, 249);
+  }
+
+  a:visited {
+      color:rgb(4, 53, 30);
+  }
+
+  a:hover {
+      color:yellow;
+      text-decoration:underline;
+      
+  }
+  a:active{
+      color:hotpink;
+  }
+  
+  .right {
+    float: right;
+  }
+  .h1
+{
+    text-decoration: yellow;
 }

@@ -1,0 +1,17 @@
+
+
+body {
+
+    background: linear-gradient(
+        rgba(189, 97, 31, .5), 
+        rgba(208, 121, 60, 0.5)
+      ),   url("https://wallpapercave.com/wp/wp1836700.jpg")
+    
+    }
+*
+{
+    margin: 1;
+    padding: 1;
+    text-align: center;
+    
+}

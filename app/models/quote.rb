@@ -11,4 +11,6 @@ class Quote < ApplicationRecord
         word.split(/\W/)[0]
     end
 
+   
+
 end
