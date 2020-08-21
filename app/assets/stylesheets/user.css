@@ -6,6 +6,7 @@
         "header header header"
         "main main main"
         "main main main"
+        "main main main"
         "footer footer footer ";
     align-content: space-around;
 }
@@ -17,10 +18,16 @@
     grid-row: 2;
 }
 
+.container.favorites {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    /* grid-template-rows: ; */
+}
+
 footer {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 5;
     text-align: center;
 }

@@ -18,7 +18,7 @@
     --button-color: #0097F2;
     --background-color: #FAFAFA;
     --border-color: #cacaca;
-    --text-color: #262626;
+    --text-color: white;
     --secondary-text-color: #8E8E8E;
     --link-color: #003869;
 
@@ -27,17 +27,31 @@
 }
 
 * {
-    box-sizing: border-box;
+    margin: 1;
+    padding: 1;
+    text-align: center;
 }
 
- body {
-    margin: 60px 0 0 0;
-    font-family: var(--body-font);
+body {
+    background: linear-gradient(
+        rgba(189, 97, 31, .5), 
+        rgba(208, 121, 60, 0.5)
+      ),   url("https://cdn.pixabay.com/photo/2015/04/20/22/17/magnolia-732332_960_720.png");
+    margin-top: 100px;
+}
+
+h1 {
     color: var(--text-color);
-    background: var(--background-color);
 }
 
+a:link {
+    color: var(--text-color);
+}
 
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
 
 #welcome {
     grid-area: header;
@@ -48,20 +62,24 @@
 }
 
 header {
-    positiion: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
 
-    border-bottom: 1px solid var(--border-color);
     height: 54px;
 
     display: flex;
     justify-content: center;
+
+    /* margin: 30px; */
+    background-color: #5e5d5d;
+    /* border: 1px solid black; */
+    opacity: 0.6;
 }
 
-#header-contents {
+.header-contents {
     width: 100%;
     max-width: 950px;
     padding: 0 10px 0 20px;
@@ -76,3 +94,21 @@ header {
     font-size: 28px;
     font-weight: 400;
 }
+
+background {
+    background: url("https://cdn.pixabay.com/photo/2015/04/20/22/17/magnolia-732332_960_720.png") repeat;
+    /* border: 2px solid black; */
+  }
+
+/* .transbox {
+    margin: 30px;
+    background-color: #5e5d5d;
+    border: 1px solid black;
+    opacity: 0.6;
+  } */
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+  }
