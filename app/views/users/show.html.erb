@@ -5,11 +5,10 @@
     
     <div class="quote">
         <h2> Random Words of Wisdom: </h2>
-        <p>"<%= @quote.content %>"<br> - <em><%= @quote.author %></em> </p>
+        <div class="transbox">
+            <p>"<%= @quote.content %>"<br> - <em><%= @quote.author %></em> </p>
+        </div>
     </div>
 
-    <footer>
-        <%= render 'user_nav' %>
-    </footer>
 </div>
 

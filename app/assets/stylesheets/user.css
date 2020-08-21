@@ -18,10 +18,14 @@
     grid-row: 2;
 }
 
+.quote h2 {
+    color: white;
+}
+
 .container.favorites {
     display: grid;
-    grid-template-columns: 25vw 25vw 25vw 25vw;
-    /* grid-template-rows: ; */
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-template-rows: 33vw 33vw 33vw 33vw 33vw 33vw;
 }
 
 footer {
@@ -30,4 +34,27 @@ footer {
     grid-column: 2;
     grid-row: 5;
     text-align: center;
+}
+
+.transbox {
+    margin: 30px;
+    background-color: #5e5d5d;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.field {
+    color: white;
+}
+
+h2 {
+    color: white;
 }
